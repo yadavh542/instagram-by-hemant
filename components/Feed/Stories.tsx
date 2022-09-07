@@ -36,7 +36,7 @@ const Stories = () => {
   return (
     <div className='flex border border-gray-200 p-6 mt-8 overflow-x-scroll space-x-3 bg-white rounded-md scrollbar-thin scrollbar-thumb-black'>
       {session && (
-        <Story img={session?.user?.image} username={session?.user?.name}/>
+        <Story img={session?.user?.image} username={(session?.user as any).username}/>
       )}
 
       {

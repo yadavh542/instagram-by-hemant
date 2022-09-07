@@ -25,7 +25,7 @@ const Modal = () => {
         // 4. get a download url from fb storage and update the original post with image
 
         const docRef = await addDoc(collection(db,"posts"),{
-            username: session?.user?.name,
+            username: (session?.user as any).username,
             caption: captionRef.current.value,
             profileImg: session?.user?.image,
             timestamp: serverTimestamp(),
@@ -97,7 +97,7 @@ const Modal = () => {
                 <> 
                 {/* camera icon */}
                 <div 
-                  onClick={()=>filePickerRef.current.click()}
+                  onClick={()=>(filePickerRef.current as any).click()}
                   className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 hover:bg-red-200 cursor-pointer mb-2'>
                     <CameraIcon
                      className='h-6 w-6 text-red-500'
