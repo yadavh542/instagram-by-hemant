@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { Fragment, useRef, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
