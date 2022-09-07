@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSession, signIn, signOut } from "next-auth/react";
 
+
 const MiniProfile = () => {
-    const {data:session} = useSession();
+    const {data:session}:any = useSession();
   return (
     <div className='p-3 mt-8 ml-4 border rounded-md flex items-center bg-white'>
         <img 
